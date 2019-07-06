@@ -1,18 +1,18 @@
 package myLearningLinux.employeesList;
 
-import myLearningLinux.employeesList.domain.EmployeesDomain;
+import myLearningLinux.employeesList.domain.Employee;
 
 import java.util.ArrayList;
 
 public class MainOnePack {
     public static void main(String[] args) {
-        ArrayList<EmployeesDomain> arrEmployees = new ArrayList();
-        arrEmployees.add(new EmployeesDomain("F", "L", 160));
-        arrEmployees.add(new EmployeesDomain("QQ", "QQQ", 180));
-        arrEmployees.add(new EmployeesDomain("RR", "RRR", 120));
-        arrEmployees.add(new EmployeesDomain("YY", "YYY", 10));
-        arrEmployees.add(new EmployeesDomain("ZZ", "ZZZ", 360));
-        arrEmployees.add(new EmployeesDomain("XX", "XXX", 10));
+        ArrayList<Employee> arrEmployees = new ArrayList();
+        arrEmployees.add(new Employee("F", "L", 160));
+        arrEmployees.add(new Employee("QQ", "QQQ", 180));
+        arrEmployees.add(new Employee("RR", "RRR", 120));
+        arrEmployees.add(new Employee("YY", "YYY", 10));
+        arrEmployees.add(new Employee("ZZ", "ZZZ", 360));
+        arrEmployees.add(new Employee("XX", "XXX", 10));
 
 
         int x = 0;

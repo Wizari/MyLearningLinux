@@ -1,11 +1,11 @@
 package myLearningLinux.employeesList.domain;
 
-public class EmployeesDomain {
+public class Employee {
     private String firstName;
     private String lastName;
     private int age;
 
-    public EmployeesDomain(String firstName, String lastName, int age) {
+    public Employee(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -37,7 +37,7 @@ public class EmployeesDomain {
 
     @Override
     public String toString() {
-        return "EmployeesDomain{" +
+        return "Employee{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
