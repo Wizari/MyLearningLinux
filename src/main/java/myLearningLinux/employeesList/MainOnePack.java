@@ -10,23 +10,23 @@ public class MainOnePack {
     public static void main(String[] args) {
         List<Employee> arrEmployees = new ArrayList<>();
         arrEmployees.add(new Employee("Ян", "Петров", 160));
-        arrEmployees.add(new Employee("Гадя", "Хренова", 120));
+        arrEmployees.add(new Employee("Гадя", "Хренова", 1200));
         arrEmployees.add(new Employee("Aадя", "Хренова", 120));
-        arrEmployees.add(new Employee("Ван", "Джоу", 20));
-        arrEmployees.add(new Employee("Ван", "Джоу", 20));
-        arrEmployees.add(new Employee("Ван", "Джоу", 20));
         arrEmployees.add(new Employee("Ган", "Джоу", 20));
+        arrEmployees.add(new Employee("Ган", "Джоу", 20));
+        arrEmployees.add(new Employee("Ган", "Джоу", 20));
+        arrEmployees.add(new Employee("Ван", "Джоу", 20));
         arrEmployees.add(new Employee("Лю", "Зайцева", 360));
         arrEmployees.add(new Employee("Аня", "Сидоров", 180));
         arrEmployees.add(new Employee("Владимир", "Путин", 148));
 
 
-//        List<Employee> empResault = MainOnePack.class.
-//        MainOnePack.class.cast().sortByLastName(arrEmployees);
         MainOnePack mainOnePack = new MainOnePack();
         mainOnePack.sortByLastName(arrEmployees);
+        mainOnePack.findOldest(arrEmployees);
 
         System.out.println(arrEmployees);
+        System.out.println(mainOnePack.findOldest(arrEmployees));
 
     }
 
@@ -36,10 +36,10 @@ public class MainOnePack {
 
     public List<Employee> sortByLastName(List<Employee> employees) {
         int a = 0;
-        while(a < 1) {
+        while (a < 1) {
             a = 1;
             int t = 1;
-            for (int i = 0; i < employees.size()-1; i++, t++) {
+            for (int i = 0; i < employees.size() - 1; i++, t++) {
 
                 int x = compareEmployeesByLastName(employees.get(i), employees.get(t));
                 if (x < 0) {
@@ -82,6 +82,7 @@ public class MainOnePack {
 
     /**
      * Метод ставнивает строки лексографически
+     *
      * @param a строка 1
      * @param b и соответственно 2
      * @return 0 - равны(s1=s2); Если положительное значение то строка a > b; Если отрицательное то a < b
@@ -91,18 +92,18 @@ public class MainOnePack {
     }
 
 
-    public void findOldest(List<Employee> arrEmployees) {
+    public Employee findOldest(List<Employee> arrEmployees) {
         int x = 0;
-        String result = "";
-        for (Employee arrEmployee : arrEmployees) {
+        Employee result = null;
 
-            int temp = arrEmployee.getAge();
+        for (int i = 0; i < arrEmployees.size(); i++) {
+            int temp = arrEmployees.get(i).getAge();
             if (x < temp) {
                 x = temp;
-                result = arrEmployee.toString();
+                result = arrEmployees.get(i);
             }
         }
 
-        System.out.println(result);
+        return result;
     }
 }
